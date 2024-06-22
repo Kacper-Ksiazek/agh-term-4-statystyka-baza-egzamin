@@ -1,6 +1,14 @@
 <script lang="ts">
+    import {QUESTIONS} from "./data/questions";
+
+    import {QuestionRandomizer} from "./utils/QuestionRandomizer";
+
+    const questions = new QuestionRandomizer(QUESTIONS);
+
+    $: currentQuestion = questions.getNewQuestion();
+
     const currentGame = {
-        isGameStarted: false,
+        currentTurnIsOver: false,
         questionNumber: 0,
         answers: {
             positive: 0,
@@ -17,23 +25,19 @@
 
     }
 
-    function startGame() {
-        currentGame.isGameStarted = true;
-        currentGame.questionNumber = 0;
-        currentGame.answers.positive = 0;
-        currentGame.answers.negative = 0;
-    }
-
     function onAnswerButtonClick(choice: boolean) {
-        if (choice) {
+        if (choice === currentQuestion.answer) {
             currentGame.answers.positive++;
+            currentQuestion = questions.getNewQuestion();
         } else {
             currentGame.answers.negative++;
+            currentGame.currentTurnIsOver = true;
         }
+    }
 
-        currentGame.questionNumber++;
-
-        //TODO: Fetch next question
+    function nextTurn() {
+        currentGame.currentTurnIsOver = false;
+        currentQuestion = questions.getNewQuestion();
     }
 
 </script>
@@ -60,22 +64,26 @@
 
     <div
             id="question-wrapper"
-            class="bg-stone-600 pt-2 pb-2 px-8 rounded-2xl my-10 w-screen max-w-[800px]"
+            class="bg-stone-600 pt-2 pb-2 px-8 rounded-2xl my-10 w-screen max-w-[1200px]"
     >
         <h2 id="question" class="my-6 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.?
+            {currentQuestion.question}
         </h2>
 
         <div class="mt-2">
             <button
-                    class="bg-green-700 hover:bg-green-500" id="true"
+                    class="bg-green-700 hover:bg-green-500 disabled:bg-stone-800 disabled:text-black transition-colors"
+                    id="true"
+                    disabled={currentGame.currentTurnIsOver}
                     on:click={() => onAnswerButtonClick(true)}
             >
                 Prawda
             </button>
 
             <button
-                    class="bg-red-700 hover:bg-red-500" id="false"
+                    class="bg-red-700 hover:bg-red-500 disabled:bg-stone-800 disabled:text-black transition-colors"
+                    id="false"
+                    disabled={currentGame.currentTurnIsOver}
                     on:click={() => onAnswerButtonClick(false)}
             >
                 Fałsz
@@ -84,13 +92,16 @@
 
     </div>
 
-    <h4 class="text-xl mb-2">Wyjaśnienie: </h4>
+    <div class="transition-opacity" style="opacity: {Number(currentGame.currentTurnIsOver)}">
+        <h4 class="text-xl mb-2">Wyjaśnienie: </h4>
 
-    <p class="opacity-700">
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quod quae. Quisquam, quod. Quisquam, quod.
-    </p>
+        <p class="opacity-700">
+            {currentQuestion.explanation}
+        </p>
 
-    <button class="mt-6">Następne pytanie</button>
+        <button class="mt-6" on:click={nextTurn}>Następne pytanie</button>
+
+    </div>
 
 </main>
 

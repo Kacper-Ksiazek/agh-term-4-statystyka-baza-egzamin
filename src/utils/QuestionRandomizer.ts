@@ -15,9 +15,10 @@ export class QuestionRandomizer {
         return this.remainingQuestions.length;
     }
 
-    public getRandomQuestion(): Question {
+    public getNewQuestion(): Question {
         if (this.remainingQuestions.length === 0) {
-            throw new Error("No more questions left");
+            alert(`Brawo! 🎉🎉 Odpowiedziałeś na wszystkie pytania! Teraz możesz zacząć od nowa.`);
+            this.reset();
         }
 
         const randomIndex = Math.floor(Math.random() * this.remainingQuestions.length);
