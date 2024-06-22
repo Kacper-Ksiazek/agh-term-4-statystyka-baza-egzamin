@@ -9,7 +9,7 @@
 
     const currentGame = {
         currentTurnIsOver: false,
-        questionNumber: 0,
+        questionNumber: 1,
         answers: {
             positive: 0,
             negative: 0,
@@ -28,21 +28,23 @@
     function onAnswerButtonClick(choice: boolean) {
         if (choice === currentQuestion.answer) {
             currentGame.answers.positive++;
-            currentQuestion = questions.getNewQuestion();
         } else {
             currentGame.answers.negative++;
-            currentGame.currentTurnIsOver = true;
         }
+        currentGame.currentTurnIsOver = true;
     }
 
     function nextTurn() {
+        currentGame.questionNumber++;
         currentGame.currentTurnIsOver = false;
-        currentQuestion = questions.getNewQuestion();
+        setTimeout(() => {
+            currentQuestion = questions.getNewQuestion();
+        }, 100)
     }
 
 </script>
 
-<main>
+<main class="pt-40">
     <h1 class="mb-2">Statystyka baza</h1>
 
     <div class="grid grid-cols-3 mt-6">
@@ -66,7 +68,7 @@
             id="question-wrapper"
             class="bg-stone-600 pt-2 pb-2 px-8 rounded-2xl my-10 w-screen max-w-[1200px]"
     >
-        <h2 id="question" class="my-6 text-xl">
+        <h2 id="question" class="my-6 text-xl min-h-[64px]">
             {currentQuestion.question}
         </h2>
 
