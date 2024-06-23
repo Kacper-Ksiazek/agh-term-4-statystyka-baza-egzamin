@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {MetaTags} from 'svelte-meta-tags'
+
     import {QUESTIONS} from "./data/questions";
 
     import {QuestionRandomizer} from "./utils/QuestionRandomizer";
@@ -9,7 +11,9 @@
 
     const currentGame = {
         currentTurnIsOver: false,
+        lastAnswerWasCorrect: false,
         questionNumber: 1,
+        numberOfRemainingQuestions: QUESTIONS.length - 1,
         answers: {
             positive: 0,
             negative: 0,
@@ -28,8 +32,10 @@
     function onAnswerButtonClick(choice: boolean) {
         if (choice === currentQuestion.answer) {
             currentGame.answers.positive++;
+            currentGame.lastAnswerWasCorrect = true;
         } else {
             currentGame.answers.negative++;
+            currentGame.lastAnswerWasCorrect = false;
         }
         currentGame.currentTurnIsOver = true;
     }
@@ -37,24 +43,26 @@
     function nextTurn() {
         currentGame.questionNumber++;
         currentGame.currentTurnIsOver = false;
+
         setTimeout(() => {
+            currentGame.numberOfRemainingQuestions--;
             currentQuestion = questions.getNewQuestion();
         }, 100)
     }
 
 </script>
 
-<title>
-    🏰 Statystyka Baza | AGH IiAD
-</title>
+<MetaTags
+        title="Statystyka Baza | AGH IiAD"
+/>
 
 <main>
-    <h1 class="mb-2">Statystyka </h1>
+    <h1 class="mb-2">Statystyka ({currentGame.numberOfRemainingQuestions})</h1>
 
     <div class="grid grid-cols-3 mt-6">
         <h4>Numer pytania: <strong>{currentGame.questionNumber}</strong></h4>
         <h4>Poprawne odpowiedzi: <strong class="text-green-500">{currentGame.answers.positive}</strong></h4>
-        <h4>Bledne odpowiedzi: <strong class="text-red-500">{currentGame.answers.negative}</strong></h4>
+        <h4>Błędne odpowiedzi: <strong class="text-red-500">{currentGame.answers.negative}</strong></h4>
     </div>
 
     <div class="flex h-[6px] mt-4 before:bg-stone-600 before:w-full before:h-full before:absolute relative">
@@ -72,7 +80,7 @@
             id="question-wrapper"
             class="bg-stone-600 pt-2 pb-2 rounded-2xl my-10 px-2 sm:px-8"
     >
-        <h2 id="question" class="my-6 text-xl  min-h-[180px] sm:min-h-[64px]">
+        <h2 id="question" class="my-6 text-xl  min-h-[180px] sm:min-h-[84px]">
             {currentQuestion.question}
         </h2>
 
@@ -99,7 +107,15 @@
     </div>
 
     <div class="transition-opacity h-[260px]" style="opacity: {Number(currentGame.currentTurnIsOver)}">
-        <h4 class="text-xl mb-2">Wyjaśnienie: </h4>
+        <h4 class="text-xl mb-2 flex gap-2 justify-center align-middle">
+            <strong
+                    class={currentGame.lastAnswerWasCorrect ? "text-green-500": "text-red-500"}
+            >
+                ODPOWIEDŹ {currentGame.lastAnswerWasCorrect ? "POPRAWNA" : "BŁĘDNA"}
+            </strong>
+            <span>|</span>
+            <span>Wyjaśnienie: </span>
+        </h4>
 
         <p class="opacity-700">
             {currentQuestion.explanation}
