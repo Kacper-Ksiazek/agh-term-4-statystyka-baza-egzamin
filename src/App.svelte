@@ -44,8 +44,8 @@
 
 </script>
 
-<main class="pt-40">
-    <h1 class="mb-2">Statystyka baza</h1>
+<main>
+    <h1 class="mb-2">Statystyka </h1>
 
     <div class="grid grid-cols-3 mt-6">
         <h4>Numer pytania: <strong>{currentGame.questionNumber}</strong></h4>
@@ -66,9 +66,9 @@
 
     <div
             id="question-wrapper"
-            class="bg-stone-600 pt-2 pb-2 px-8 rounded-2xl my-10 w-screen max-w-[1200px]"
+            class="bg-stone-600 pt-2 pb-2 rounded-2xl my-10 px-2 sm:px-8"
     >
-        <h2 id="question" class="my-6 text-xl min-h-[64px]">
+        <h2 id="question" class="my-6 text-xl  min-h-[180px] sm:min-h-[64px]">
             {currentQuestion.question}
         </h2>
 
@@ -94,7 +94,7 @@
 
     </div>
 
-    <div class="transition-opacity" style="opacity: {Number(currentGame.currentTurnIsOver)}">
+    <div class="transition-opacity h-[260px]" style="opacity: {Number(currentGame.currentTurnIsOver)}">
         <h4 class="text-xl mb-2">Wyjaśnienie: </h4>
 
         <p class="opacity-700">
