@@ -11,8 +11,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 2,
         question: "Populacja skończona jest typowa dla eksperymentów naukowych",
-        answer: true,
-        explanation: "🟩 Eksperymenty naukowe często operują na skończonych populacjach ze względu na ograniczone zasoby i czas."
+        answer: false,
+        explanation: "🟥  Fałsz, dla społeczno ekonomicznych jest skończona, eksperymenty naukowe przez ich powtarzanie mają populacje nieskończona."
     },
     {
         id: 3,
@@ -47,8 +47,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 8,
         question: "Nierówność Rao-Cramera określa kres dolny wariancji dowolnego estymatora",
-        answer: true,
-        explanation: "🟩 Nierówność Rao-Cramera określa dolną granicę wariancji nieobciążonych estymatorów."
+        answer: false,
+        explanation: "🟥  Nierówność Rao-Cramera określa dolną granicę wariancji nieobciążonych estymatorów."
     },
     {
         id: 9,
@@ -71,8 +71,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 12,
         question: "Przedział ufności to taki przedział, do którego z prawdopodobieństwem 1 - α trafia wartość szacowanego parametru",
-        answer: true,
-        explanation: "🟩 Przedział ufności jest skonstruowany tak, że z prawdopodobieństwem 1 - α zawiera szacowany parametr populacji."
+        answer: false,
+        explanation: "🟥  1-a jest wielkością to prawdopodobieństwo wyznaczenia takiego przedziału, że rzeczywista wartość parametru 𝜃 w populacji znajdzie się w tym przedziale, czyli ze na 0.99 wyznaczymy przedzial który obejmie wartość szacowanego parametru, a nie ze na 0.99 ta wartość trafi do przedziału. "
     },
     {
         id: 13,
@@ -124,9 +124,9 @@ export const QUESTIONS: Question[] = [
     },
     {
         id: 21,
-        question: "Statystyka służą do weryfikacji hipotezy o wielkości wariancji populacji o rozkładzie normalnym ma dla dużej próby rozkład asymptotyczny chi 2",
+        question: "Statystyka służąca do weryfikacji hipotezy o wielkości wariancji populacji o rozkładzie normalnym ma dla dużej próby rozkład asymptotyczny chi 2",
         answer: true,
-        explanation: "🟩 W dużych próbach, statystyka testu wariancji zbliża się do rozkładu chi-kwadrat."
+        explanation: "🟩 W dużych próbach, statystyka testu wariancji zbliża się do rozkładu normalnego N(0,1)"
     },
     {
         id: 22,
@@ -155,8 +155,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 26,
         question: "Jeżeli t jest zmienną o rozkładzie t Studenta z k stopniami swobody to zmienna losowa F=t^2 ma rozkład F Snedecora z k1 = k i k2 = 1 stopniami swobody.",
-        answer: true,
-        explanation: "🟩 Gdy t ma rozkład t Studenta z k stopniami swobody, t^2 ma rozkład F Snedecora z k1 = k i k2 = 1 stopniami swobody."
+        answer: false,
+        explanation: "🟥 Gdy t ma rozkład t Studenta z k stopniami swobody, t^2 ma rozkład F Snedecora z k1 = 1 i k2 = k stopniami swobody."
     },
     {
         id: 27,
@@ -168,7 +168,7 @@ export const QUESTIONS: Question[] = [
         id: 28,
         question: "Przy liczebności z próby n > 30 zawsze można korzystać z granicznego rozkładu statystyki",
         answer: false,
-        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
+        explanation: " FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
     },
     {
         id: 29,
@@ -186,13 +186,13 @@ export const QUESTIONS: Question[] = [
         id: 31,
         question: "Przedział ufności dla współczynnika korelacji p w dwuwymiarowej populacji normalnej oparty jest na rozkładzie t Studenta",
         answer: false,
-        explanation: "🟥 Przedział ufności dla współczynnika korelacji często oparty jest na transformacji Z Fishera, a nie bezpośrednio na rozkładzie t Studenta."
+        explanation: "🟥 Przedział ufności dla współczynnika korelacji oparty jest na rozkładzie normalnym N(0,1)"
     },
     {
         id: 32,
         question: "Warunkiem dostatecznym zgodności estymatora jest dla n → ∞ zbieżność do zera jego wariancji",
-        answer: true,
-        explanation: "🟩 Zbieżność wariancji estymatora do zera dla n → nieskończoność jest warunkiem dostatecznym zgodności estymatora."
+        answer: false,
+        explanation: "🟥 Nie, musi być on też estymatorem nieobciążonym albo obciążonym ale asymptotycznie nieobciążonym."
     },
     {
         id: 33,
@@ -210,7 +210,7 @@ export const QUESTIONS: Question[] = [
         id: 35,
         question: "Metoda najmniejszych kwadratów wymaga znajomości funkcji gęstości prawdopodobieństwa rozkładu populacji",
         answer: false,
-        explanation: "🟥 Metoda najmniejszych kwadratów nie wymaga znajomości funkcji gęstości rozkładu populacji, opiera się na minimalizacji sumy kwadratów odchyleń."
+        explanation: "🟥 Metoda najmniejszych kwadratów nie wymaga znajomości funkcji gęstości rozkładu populacji, opiera się na minimalizacji sumy kwadratów odchyleń. Wystarczy zbiór danych w postaci par liczb"
     },
     {
         id: 36,
@@ -288,7 +288,7 @@ export const QUESTIONS: Question[] = [
         id: 48,
         question: "W teście zgodności chi2 stosowanym dla n-elementowej próby z której nie szacowano żadnego parametru hipotetycznego rozkładu odpowiada statystyka ma n-1 stopni swobody.",
         answer: true,
-        explanation: "🟩 Dla testu chi2 zgodności z n-elementową próbą, statystyka ma n-1 stopni swobody, ponieważ nie szacujemy żadnych parametrów rozkładu."
+        explanation: "🟩 Dla testu chi2 zgodności z n-elementową próbą, statystyka ma k-1 stopni swobody,gdzie k to liczba przedziałów klasowych, ponieważ nie szacujemy żadnych parametrów rozkładu."
     },
     {
         id: 49,
@@ -305,8 +305,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 51,
         question: "Hipotezę o zgodności rozkładu empirycznego z rozkładem dwumianowym można sprawdzić między innymi testem zgodności λ Kołmogorowa.",
-        answer: false,
-        explanation: "🟥 Test Kołmogorowa-Smirnowa nie jest odpowiedni do testowania zgodności z rozkładem dwumianowym; lepsze są testy chi2 lub testy oparte na rozkładzie dwumianowym."
+        answer: true,
+        explanation: "🟩 Test zgodności Kolmogorowa-Smirnowa (test K-S) służy do porównania rozkładu empirycznego z określonym rozkładem teoretycznym."
     },
     {
         id: 52,
@@ -384,7 +384,7 @@ export const QUESTIONS: Question[] = [
         id: 65,
         question: "Estymatory uzyskane metodą momentów są zawsze obciążone.",
         answer: false,
-        explanation: "🟥 Estymatory uzyskane metodą momentów nie są zawsze obciążone; ich własności zależą od konkretnej sytuacji."
+        explanation: "🟥 Fałsz, Średnia z próby, uzyskana metodą momentów, jest nieobciążonym estymatorem wartości oczekiwanej μ w populacji o rozkładzie normalnym. Jest to przykład estymatora uzyskanego metodą momentów, który jest nieobciążony."
     },
     {
         id: 66,
@@ -432,7 +432,7 @@ export const QUESTIONS: Question[] = [
         id: 73,
         question: "Hipotezę o równości wariancji w dwóch populacjach normalnych można zweryfikować zarówno testem Bartletta, jak i testem opartym na statystyce Snedecora.",
         answer: false,
-        explanation: "🟥 Hipotezę o równości wariancji w dwóch populacjach weryfikuje się najczęściej testem F (Snedecora), natomiast test Bartletta używany jest dla więcej niż dwóch grup."
+        explanation: "Hipotezę o równości wariancji w dwóch populacjach weryfikuje się najczęściej testem F (Snedecora), natomiast test Bartletta używany jest dla więcej niż dwóch grup."
     },
     {
         id: 74,
@@ -443,7 +443,7 @@ export const QUESTIONS: Question[] = [
     {
         id: 75,
         question: "Statystyka Dn1n2 Smirnowa w teście zgodności ma rozkład identyczny jak statystyka Dn Kołmogorowa.",
-        answer: true,
-        explanation: "🟩 Statystyka Dn1n2 Smirnowa w teście zgodności ma rozkład podobny do statystyki Dn Kołmogorowa, używanej w teście zgodności Kołmogorowa-Smirnowa."
+        answer: false,
+        explanation: "🟥 Test jednopróbkowy Kolmogorova sprawdza zgodność rozkładu empirycznego z określonym rozkładem teoretycznym, Test dwupróbkowy Smirnova porównuje dwie empiryczne dystrybuanty z dwóch niezależnych prób. Maja one podobne rozkłady, ale nie identyczne"
     },
 ]
