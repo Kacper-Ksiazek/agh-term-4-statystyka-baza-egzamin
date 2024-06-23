@@ -101,7 +101,12 @@
             {currentQuestion.explanation}
         </p>
 
-        <button class="mt-6" on:click={nextTurn}>Następne pytanie</button>
+        <button
+                class="mt-6"
+                on:click={nextTurn}
+                disabled={!currentGame.currentTurnIsOver}
+        >Następne pytanie
+        </button>
 
     </div>
 
