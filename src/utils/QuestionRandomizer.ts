@@ -19,6 +19,7 @@ export class QuestionRandomizer {
         if (this.remainingQuestions.length === 0) {
             alert(`Brawo! 🎉🎉 Odpowiedziałeś na wszystkie pytania! Teraz możesz zacząć od nowa.`);
             this.reset();
+            return this.getNewQuestion();
         }
 
         const randomIndex = Math.floor(Math.random() * this.remainingQuestions.length);
