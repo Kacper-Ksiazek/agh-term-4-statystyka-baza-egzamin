@@ -351,9 +351,99 @@ export const QUESTIONS: Question[] = [
         explanation: "🟩 Test Bartletta jest używany do sprawdzenia homogeniczności wariancji przed przeprowadzeniem analizy wariancji (ANOVA)."
     },
     {
-        id: 59,
-        question: "Odrzucanie hipotezy H0 w teście niezależności chi2 oznacza występowanie korelacji między cechami X i Y.",
+        id: 60,
+        question: "Próba nielosowa może być próbą reprezentatywną.",
         answer: true,
-        explanation: "🟩 Odrzucenie hipotezy H0 w teście niezależności chi2 wskazuje na istotny związek między cechami X i Y, co można interpretować jako istnienie korelacji."
+        explanation: "🟩 Próba nielosowa może być reprezentatywna, jeśli jest starannie dobrana, aby odzwierciedlała strukturę populacji."
+    },
+    {
+        id: 61,
+        question: "Rozkład t-Studenta jest związany z rozkładem normalnym wyłącznie zależnością graniczną (dla b. dużych prób).",
+        answer: true,
+        explanation: "🟩 Rozkład t-Studenta zbliża się do rozkładu normalnego, gdy liczba stopni swobody rośnie, czyli dla bardzo dużych prób."
+    },
+    {
+        id: 62,
+        question: "Przedziały klasowe szeregu rozdzielczego cechy ciągłej są zbiorami rozłącznymi.",
+        answer: true,
+        explanation: "🟩 Przedziały klasowe są zawsze rozłączne, aby każda wartość zmiennej losowej należała tylko do jednego przedziału."
+    },
+    {
+        id: 63,
+        question: "Estymator najefektywniejszy jest również estymatorem asymptotycznie najefektywniejszym.",
+        answer: false,
+        explanation: "🟥 Estymator najefektywniejszy w małych próbach nie musi być asymptotycznie najefektywniejszy; te właściwości mogą się różnić."
+    },
+    {
+        id: 64,
+        question: "Średnia z próby avg X jest estymatorem dostatecznym wartości oczekiwanej w populacji o rozkładzie Poissona.",
+        answer: true,
+        explanation: "🟩 W populacji o rozkładzie Poissona średnia z próby jest estymatorem dostatecznym dla wartości oczekiwanej."
+    },
+    {
+        id: 65,
+        question: "Estymatory uzyskane metodą momentów są zawsze obciążone.",
+        answer: false,
+        explanation: "🟥 Estymatory uzyskane metodą momentów nie są zawsze obciążone; ich własności zależą od konkretnej sytuacji."
+    },
+    {
+        id: 66,
+        question: "W metodzie największej wiarygodności posługujemy się logarytmem funkcji wiarygodności, gdyż zachodzi max L = max ln L.",
+        answer: true,
+        explanation: "🟩 Posługiwanie się logarytmem funkcji wiarygodności jest wygodne matematycznie i nie zmienia miejsca maksimum, ponieważ logarytm jest funkcją monotoniczną."
+    },
+    {
+        id: 67,
+        question: "Dla próby o liczebności n układ równań normalnych w metodzie najmniejszych kwadratów składa się z n równań.",
+        answer: false,
+        explanation: "🟥 W metodzie najmniejszych kwadratów liczba równań normalnych wynosi tyle, ile jest parametrów do oszacowania, a nie liczba obserwacji n."
+    },
+    {
+        id: 68,
+        question: "Do wyznaczenia przedziału ufności dla parametru θ z małej próby konieczna jest znajomość dokładnego rozkładu dowolnego estymatora tego parametru.",
+        answer: true,
+        explanation: "🟩 W przypadku małych prób znajomość dokładnego rozkładu estymatora jest konieczna do dokładnej konstrukcji przedziału ufności."
+    },
+    {
+        id: 69,
+        question: "Długość przedziału ufności dla średniej m populacji o rozkładzie N(m,5) jest wielkością nielosową.",
+        answer: false,
+        explanation: "🟥 Długość przedziału ufności zależy od konkretnej próby (m.in. od średniej i odchylenia standardowego z próby), więc jest wielkością losową."
+    },
+    {
+        id: 70,
+        question: "Wartości współczynnika korelacji r oraz jej liczebność n oraz nα dla dużej próby jest wystarczającą informacją do wyznaczenia oceny przedziałowej współczynnika korelacji ρ w populacji o rozkładzie normalnym.",
+        answer: true,
+        explanation: "🟩 Dla dużych prób wartości współczynnika korelacji r, liczebności próby n i poziomu istotności α są wystarczające do konstrukcji przedziału ufności dla ρ."
+    },
+    {
+        id: 71,
+        question: "Jeśli dla dwóch testów zachodzi nierówność α1 < α2 to test drugi jest testem o większej mocy niż test pierwszy.",
+        answer: false,
+        explanation: "🟥 Mniejsza wartość α (poziom istotności) nie oznacza automatycznie większej mocy testu; moc zależy również od innych czynników, takich jak rozkład statystyki testowej i próba."
+    },
+    {
+        id: 72,
+        question: "Hipotezę, że w populacji o normalnym rozkładzie wariancja jest równa pewnej określonej liczbie sprawdzić możemy między innymi testem Bartletta.",
+        answer: false,
+        explanation: "🟥 Test Bartletta służy do sprawdzania jednorodności wariancji między kilkoma grupami, a nie porównania wariancji z określoną wartością."
+    },
+    {
+        id: 73,
+        question: "Hipotezę o równości wariancji w dwóch populacjach normalnych można zweryfikować zarówno testem Bartletta, jak i testem opartym na statystyce Snedecora.",
+        answer: false,
+        explanation: "🟥 Hipotezę o równości wariancji w dwóch populacjach weryfikuje się najczęściej testem F (Snedecora), natomiast test Bartletta używany jest dla więcej niż dwóch grup."
+    },
+    {
+        id: 74,
+        question: "Tablice kontyngencji tworzone do testów niezależności nie mogą zawierać komórek o zerowych liczebnościach (tzw. „dziur”).",
+        answer: true,
+        explanation: "🟩 Komórki o zerowych liczebnościach mogą znacząco wpłynąć na wyniki testu chi-kwadrat, dlatego zwykle unika się takich sytuacji."
+    },
+    {
+        id: 75,
+        question: "Statystyka Dn1n2 Smirnowa w teście zgodności ma rozkład identyczny jak statystyka Dn Kołmogorowa.",
+        answer: true,
+        explanation: "🟩 Statystyka Dn1n2 Smirnowa w teście zgodności ma rozkład podobny do statystyki Dn Kołmogorowa, używanej w teście zgodności Kołmogorowa-Smirnowa."
     },
 ]
