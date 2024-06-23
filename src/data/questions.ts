@@ -143,8 +143,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 24,
         question: "Odrzucenie hipotezy H0 w teście niezależności chi2 oznacza występowanie korelacji między cechami X i Y.",
-        answer: true,
-        explanation: "🟩 Odrzucenie H0 w teście chi-kwadrat wskazuje na istnienie zależności między zmiennymi, co może oznaczać korelację."
+        answer: false,
+        explanation: "🟥 FAŁSZ: Odrzucenie hipotezy H0 w teście niezależności chi2 oznacza, że istnieje zależność (statystycznie istotny związek) między cechami X i Y, ale niekoniecznie korelacja, która odnosi się do siły i kierunku liniowego związku między zmiennymi."
     },
     {
         id: 25,
@@ -167,8 +167,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 28,
         question: "Przy liczebności z próby n > 30 zawsze można korzystać z granicznego rozkładu statystyki",
-        answer: true,
-        explanation: "🟩 Dla n > 30, zgodnie z centralnym twierdzeniem granicznym, rozkład statystyki próby często można przybliżać rozkładem normalnym."
+        answer: false,
+        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
     },
     {
         id: 29,
@@ -359,8 +359,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 61,
         question: "Rozkład t-Studenta jest związany z rozkładem normalnym wyłącznie zależnością graniczną (dla b. dużych prób).",
-        answer: true,
-        explanation: "🟩 Rozkład t-Studenta zbliża się do rozkładu normalnego, gdy liczba stopni swobody rośnie, czyli dla bardzo dużych prób."
+        answer: false,
+        explanation: "🟥 FAŁSZ: Rozkład t-Studenta jest związany z rozkładem normalnym nie tylko granicznie. Dla mniejszych prób uwzględnia dodatkową zmienność wynikającą z szacowania odchylenia standardowego z próby. Granicznie, przy dużych próbach, rozkład t-Studenta rzeczywiście zbliża się do rozkładu normalnego, ale powiązanie jest bardziej fundamentalne."
     },
     {
         id: 62,
