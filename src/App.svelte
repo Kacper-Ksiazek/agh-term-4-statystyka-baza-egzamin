@@ -44,6 +44,10 @@
 
 </script>
 
+<title>
+    🏰 Statystyka Baza | AGH IiAD
+</title>
+
 <main>
     <h1 class="mb-2">Statystyka </h1>
 
