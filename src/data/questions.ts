@@ -161,8 +161,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 27,
         question: "Histogram daje więcej informacji z próby niż szereg rozdzielczy",
-        answer: true,
-        explanation: "🟩 Histogram przedstawia rozkład próby w sposób graficzny, co pozwala na lepszą wizualizację danych i identyfikację cech takich jak asymetria czy obecność mod."
+        answer: false,
+        explanation: "🟥 Szereg rozbieżny daje tyle samo informacji co histogram, ale w innej formie. Histogram jest bardziej wizualny, a szereg rozdzielczy jest bardziej formalny i precyzyjny."
     },
     {
         id: 28,
