@@ -125,8 +125,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 21,
         question: "Statystyka służąca do weryfikacji hipotezy o wielkości wariancji populacji o rozkładzie normalnym ma dla dużej próby rozkład asymptotyczny chi 2",
-        answer: true,
-        explanation: "🟩 W dużych próbach, statystyka testu wariancji zbliża się do rozkładu normalnego N(0,1)"
+        answer: false,
+        explanation: "🟥  W dużych próbach, statystyka testu wariancji zbliża się do rozkładu normalnego N(0,1)"
     },
     {
         id: 22,
@@ -168,7 +168,7 @@ export const QUESTIONS: Question[] = [
         id: 28,
         question: "Przy liczebności z próby n > 30 zawsze można korzystać z granicznego rozkładu statystyki",
         answer: false,
-        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów."
+        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
     },
     {
         id: 29,
@@ -407,8 +407,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 69,
         question: "Długość przedziału ufności dla średniej m populacji o rozkładzie N(m,5) jest wielkością nielosową.",
-        answer: false,
-        explanation: "🟥 Długość przedziału ufności zależy od konkretnej próby (m.in. od średniej i odchylenia standardowego z próby), więc jest wielkością losową."
+        answer: true,
+        explanation: "🟩 Długość przedziału ufności zależy od  odchylenia standardowego, ktore jest znane, wiec jest wielkoscia nielosowa bo dla tej samej liczebnosci proby zawsze bedzie mial ta sama dlugosc"
     },
     {
         id: 70,
@@ -432,7 +432,7 @@ export const QUESTIONS: Question[] = [
         id: 73,
         question: "Hipotezę o równości wariancji w dwóch populacjach normalnych można zweryfikować zarówno testem Bartletta, jak i testem opartym na statystyce Snedecora.",
         answer: false,
-        explanation: "Hipotezę o równości wariancji w dwóch populacjach weryfikuje się najczęściej testem F (Snedecora), natomiast test Bartletta używany jest dla więcej niż dwóch grup."
+        explanation: "🟥Hipotezę o równości wariancji w dwóch populacjach weryfikuje się najczęściej testem F (Snedecora), natomiast test Bartletta używany jest dla więcej niż dwóch grup."
     },
     {
         id: 74,
