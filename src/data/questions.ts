@@ -168,7 +168,7 @@ export const QUESTIONS: Question[] = [
         id: 28,
         question: "Przy liczebności z próby n > 30 zawsze można korzystać z granicznego rozkładu statystyki",
         answer: false,
-        explanation: " FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
+        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów."
     },
     {
         id: 29,
