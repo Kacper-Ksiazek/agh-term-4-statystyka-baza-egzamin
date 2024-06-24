@@ -287,8 +287,8 @@ export const QUESTIONS: Question[] = [
     {
         id: 48,
         question: "W teście zgodności chi2 stosowanym dla n-elementowej próby z której nie szacowano żadnego parametru hipotetycznego rozkładu odpowiada statystyka ma n-1 stopni swobody.",
-        answer: true,
-        explanation: "🟩 Dla testu chi2 zgodności z n-elementową próbą, statystyka ma k-1 stopni swobody,gdzie k to liczba przedziałów klasowych, ponieważ nie szacujemy żadnych parametrów rozkładu."
+        answer: false,
+        explanation: "🟥 Dla testu chi2 zgodności z n-elementową próbą, statystyka ma k-1 stopni swobody,gdzie k to liczba przedziałów klasowych, ponieważ nie szacujemy żadnych parametrów rozkładu."
     },
     {
         id: 49,
