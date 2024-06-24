@@ -90,7 +90,7 @@ export const QUESTIONS: Question[] = [
         id: 15,
         question: "Przedział ufności dla współczynnika korelacji ϱ w dwuwymiarowej populacji normalnej oparty jest na rozkładzie t Studenta.",
         answer: false,
-        explanation: "🟥 Przedział ufności dla współczynnika korelacji opiera się na transformacji Z Fishera, a nie bezpośrednio na rozkładzie t Studenta."
+        explanation: "🟥 Przedział ufności dla współczynnika korelacji opiera się na rozkładzie normalnym N(0,1)"
     },
     {
         id: 16,
