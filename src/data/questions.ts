@@ -168,7 +168,7 @@ export const QUESTIONS: Question[] = [
         id: 28,
         question: "Przy liczebności z próby n > 30 zawsze można korzystać z granicznego rozkładu statystyki",
         answer: false,
-        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów. Czasami wymagane są większe próby lub inne założenia muszą być spełnione, aby graniczny rozkład statystyki był dokładny."
+        explanation: "🟥 FAŁSZ: Choć liczebność próby n > 30 często jest uznawana za wystarczającą do stosowania centralnego twierdzenia granicznego i przybliżenia rozkładu normalnego, nie zawsze jest to odpowiednie dla wszystkich statystyk i rozkładów"
     },
     {
         id: 29,
@@ -360,7 +360,7 @@ export const QUESTIONS: Question[] = [
         id: 61,
         question: "Rozkład t-Studenta jest związany z rozkładem normalnym wyłącznie zależnością graniczną (dla b. dużych prób).",
         answer: false,
-        explanation: "🟥 FAŁSZ: Rozkład t-Studenta jest związany z rozkładem normalnym nie tylko granicznie. Dla mniejszych prób uwzględnia dodatkową zmienność wynikającą z szacowania odchylenia standardowego z próby. Granicznie, przy dużych próbach, rozkład t-Studenta rzeczywiście zbliża się do rozkładu normalnego, ale powiązanie jest bardziej fundamentalne."
+        explanation: "🟥 FAŁSZ: Rozkład t-Studenta jest związany z rozkładem normalnym nie tylko granicznie. Dla mniejszych prób uwzględnia dodatkową zmienność wynikającą z szacowania odchylenia standardowego z próby. Granicznie, przy dużych próbach, rozkład t-Studenta rzeczywiście zbliża się do rozkładu normalnego."
     },
     {
         id: 62,
