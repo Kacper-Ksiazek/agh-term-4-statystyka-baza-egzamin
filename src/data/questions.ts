@@ -87,12 +87,6 @@ export const QUESTIONS: Question[] = [
         explanation: "🟩 Długość przedziału ufności dla wariancji zależy od wielkości próby, ponieważ wpływa ona na oszacowanie wariancji."
     },
     {
-        id: 15,
-        question: "Przedział ufności dla współczynnika korelacji ϱ w dwuwymiarowej populacji normalnej oparty jest na rozkładzie t Studenta.",
-        answer: false,
-        explanation: "🟥 Przedział ufności dla współczynnika korelacji opiera się na transformacji Z Fishera, a nie bezpośrednio na rozkładzie t Studenta."
-    },
-    {
         id: 16,
         question: "Za pomocą statystyki λ Kołmogorowa można oszacować analityczną postać ciągłej dystrybuanty F(x) populacji",
         answer: false,
